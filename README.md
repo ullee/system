@@ -1,9 +1,9 @@
-download
+golang v1.14.5 download
 ```
 wget https://golang.org/dl/go1.14.5.linux-amd64.tar.gz
 ```
 
-install
+golang v1.14.5 install
 ```
 tar xzvBpf go1.14.5.linux-amd64.tar.gz && \
 sudo mv go /usr/local/src/go1.14.5 && \
@@ -22,9 +22,15 @@ source ~/.bashrc
 build
 ```
 cd /home/system/src/watchdog && go install
+cd /home/system/src/watchdog-server && go install
 ```
 
-execute
+execute server
+```
+/home/system/bin/watchdog-server
+```
+
+execute client
 ```
 /home/system/bin/watchdog
 ```
