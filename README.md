@@ -15,22 +15,23 @@ unlink go1.14.5.linux-amd64.tar.gz
 env
 ```
 vi ~/.bashrc
+# GOPATH는 프로젝트 환경에 맞게 설정 한다. 의존성 패키지들이 해당 경로로 설치 된다.
 export GOPATH=/home/system
 source ~/.bashrc
 ```
 
 build
 ```
-cd /home/system/src/watchdog && go install
-cd /home/system/src/watchdog-server && go install
+cd $GOPATH/src/watchdog && go install
+cd $GOPATH/src/watchdog-server && go install
 ```
 
 execute server
 ```
-/home/system/bin/watchdog-server
+$GOPATH/bin/watchdog-server
 ```
 
 execute client
 ```
-/home/system/bin/watchdog
+$GOPATH/bin/watchdog
 ```
